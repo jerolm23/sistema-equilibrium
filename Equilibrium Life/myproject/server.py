@@ -15,6 +15,8 @@ app.config['MAIL_PASSWORD'] = 'x r y e s h y d i p c a u z a n'
 
 CORS(app)
 
+mail = Mail(app)
+
 @app.route("/registro", methods=['POST'])
 def insertar():
 
@@ -95,30 +97,27 @@ def delet(id):
 
     return "OK"
 
+@app.route("/enviarMensaje", methods=["POST"])
+def sendM():
 
-mail = Mail(app)
+    body=request.get_json()
+    bodyEmail=f"""  
+     <h1 style='color:rgb(23,229,23)'>Nombre: <span style='color:black'>{body.get("name")}</span></h1>
+     <h1 style='color:rgb(23,229,23)'>Correo: <span style='color:black'>{body.get("to")}</span></h1>  
+     <h1 style='color:rgb(23,229,23)'>Telefono: <span style='color:black'>{body.get("tel")}</span></h1>  
+     <h1 style='color:rgb(23,229,23)'>Mensaje: <span style='color:black'>{body.get("mss")}</span></h1>  
+    """
+    enviarEmail(["equilibriumlifeparati@gmail.com"], "Mensaje - PQRS, Usuario", bodyEmail)
+    return "ok"
 
-@app.route("/contact", methods=['GET', 'POST'])
-def contacto():
-    if request.method == 'POST':
-        nombre = request.form['Name']
-        email = request.form['Email']
-        telefono = request.form['Phone number']
-        mensaje = request.form['Message']
+def enviarEmail(to,subject,body):
+    msg = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=to)  
+    msg.html=body
+    try:
+        mail.send(msg) 
+    except Exception as e:
+        print(e)
 
-
-        msg = Message('Nuevo mensaje de contacto',
-                    sender=app.config['MAIL_USERNAME'], 
-                    recipients=['equilibriumlifeparati@gmail.com'])  
-        msg.body = f"Nombre: {nombre}\nEmail: {email}\nTeléfono: {telefono}\nMensaje: {mensaje}"
-
-        try:
-            mail.send(msg) 
-            return 'Mensaje enviado correctamente.'
-        except Exception as e:
-            return 'Error al enviar el mensaje: ' + str(e)
-
-    return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

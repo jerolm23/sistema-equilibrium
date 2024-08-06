@@ -263,23 +263,24 @@
             </div>
             <div class="row">
                <div class="col-md-6">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form formularioFooter">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre" type="text" name="Name" required> 
+                           <input class="contactus" placeholder="Nombre" type="text" name="Name" required id="nombreFooter" disabled> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="email" name="Email" required id="emailFooter"> 
+                           <input class="contactus" placeholder="Email" type="email" name="Email" required id="emailFooter" disabled> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Telefono" type="text" name="Phone_number" required>                          
+                           <input class="contactus" placeholder="Telefono" type="text" name="Phone_number" required id="numeroFooter">                          
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" name="Message" required></textarea>
+                           <textarea class="textarea" placeholder="Mensaje" name="Message" required id="mensajeFooter"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" type="submit">Enviar</button>
+                           <button class="send_btn" type="submit" id="enviarFooter">Enviar</button>
                         </div>
+                        <h2 id="confirmacionFooter" style="color: transparent;">ENVIADO</h2>
                      </div>
                   </form>
                </div>

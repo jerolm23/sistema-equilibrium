@@ -27,6 +27,7 @@ window.addEventListener("load",()=>{
         e.preventDefault();
         let email=document.querySelector("#emailLogin").value;
         let pass=document.querySelector("#contrasenaLogin").value;
+        if(email=="" || pass=="") return alert("Completar todos los campos");
         fetch("http://localhost:5000/login/"+email+"/"+pass).then((response)=>{
             response.json().then((txt)=>{
                 if(txt.estado=="si"){
