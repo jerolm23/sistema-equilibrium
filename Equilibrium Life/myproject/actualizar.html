@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/actualizar.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="nombre">
+        <input type="text" id="correo">
+        <input type="text" id="contrasena">
+        <input type="submit" value="Actualizar">
+    </form>
+    <button type="button" id="del">Eliminar Cuenta</button>
+</body>
+
+<script>
+
+    window.addEventListener("load",()=>{
+        fetch("http://localhost:5000/obtenerUsuario/"+sessionStorage.getItem("key")).then(response=>{
+            response.json().then(body=>{
+                document.querySelector("#nombre").value=body.nombre;
+                document.querySelector("#correo").value=body.correo;
+                document.querySelector("#contrasena").value=body.contra;
+            })
+        });
+        document.querySelector("form").addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let body={nombre:document.querySelector("#nombre").value, correo:document.querySelector("#correo").value, contra:document.querySelector("#contrasena").value, id:sessionStorage.getItem("key")}
+            fetch("http://localhost:5000/actualizar", {method:"POST", headers:{'Content-Type':"application/json"}, body:JSON.stringify(body)}).then(()=>{
+                document.location.href="login.html";
+            });
+
+        },false);
+        document.querySelector("#del").addEventListener("click",()=>{
+            fetch("http://localhost:5000/eliminar/"+sessionStorage.getItem("key")).then(()=>{
+                document.location.href="login.html";
+            },false);
+        },false);
+    },false)
+
+</script>
+
+</html>

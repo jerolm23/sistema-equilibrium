@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LIBROS</title>
+
+    <!--Estilos front-end-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/icono ventana.png" type="image/gif" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="css/style libreria.css">
+    
+    <!--Customizacion Scroollbar-->
+    <link rel="stylesheet" href="css/scrollbar-colorblue.css">
+
+    <style>
+       body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+       }
+       .content-container {
+          display: flex;
+          flex-grow: 1;
+       }
+       .nav-panel {
+          height: 100%;
+          width: 250px;
+          background-color: #111;
+          padding-top: 20px;
+          flex-shrink: 0;
+       }
+       .nav-panel a {
+          padding: 10px 15px;
+          text-decoration: none;
+          font-size: 18px;
+          color: #818181;
+          display: block;
+       }
+       .nav-panel a:hover {
+          color: #f1f1f1;
+       }
+       .main-content {
+          padding: 20px;
+          width: 100%;
+       }
+       .content-section {
+          display: none;
+       }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="header">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-12 col-sm-3 col logo_section">
+                    <div class="full">
+                       <div class="center-desk">
+                          <div class="logo">
+                             <a href="index.html"><img src="images/icono ventana.png" alt="#" /></a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-10 offset-md-1">
+                    <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarsExample04">
+                          <ul class="navbar-nav mr-auto">
+                             <li class="nav-item active">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="about.html">ACERCA</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="service.html">SERVICIOS</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">GALERIA</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="testimonial.html">MULTIMEDIA</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="contact.html">CONTACTANOS</a>
+                             </li>
+                          </ul>
+                       </div>
+                    </nav>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </header>
+    <!--About-->
+
+    <div class="about">
+
+        <div class="about_image">
+            <img src="images/about.png">
+        </div>
+        <div class="about_tag">
+            <h1>Acerca de la libreria</h1>
+            <p>
+                Bienvenidos a nuestra Librería, un espacio dedicado a nutrir el espíritu y la mente. Nos especializamos en ofrecer una selección
+                 curada de libros espirituales y emocionales, diseñados para guiar a nuestros lectores en su viaje de autodescubrimiento y 
+                 crecimiento personal.
+                 En nuestra librería, encontrarás una amplia gama de títulos que abarcan diversas áreas del desarrollo personal y espiritual, incluyendo:
+                crecimiento personal
+                crecimiento mental
+                crecimiento espiritual.
+            </p>
+            <a href="#" class="about_btn">Ver mas</a>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!--Books-->
+
+    <div class="featured_boks">
+
+        <h1>Libros disponibles</h1>
+
+        <div class="featured_book_box">
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                <img src="images/978849759595.png.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El Arte De La Felicidad</p>
+                    <div class="categories">Crecimiento espiritual</div>
+                    <a href="\pdfs\CRECIMIENTO ESPIRITUAL\Dalai Lama - El Arte De La Felicidad.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/images-_6_.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    
+                    <h2>Para descargar</h2>
+                    <p class="writer">El poder del ahora</p>
+                    <div class="categories">Crecimiento espiritual</div>
+                    <a href="pdfs/CRECIMIENTO ESPIRITUAL/El_poder_del_ahora_Eckhart_Tolle.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 3.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El hombre en busca del sentido</p>
+                    <div class="categories">Crecimiento espiritual</div>
+                    <a href="\pdfs\CRECIMIENTO ESPIRITUAL\El-Hombre-en-Busca-de-Sentido-Frankl-Viktor.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro-4.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El arte de vivir</p>
+                    <div class="categories">Crecimiento espiritual</div>
+                    <a href="\pdfs\CRECIMIENTO ESPIRITUAL\Epicteto - El Arte de vivir.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 5.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Los cuatros acuerdos</p>
+                    <div class="categories">Crecimiento espiritual</div>
+                    <a href="\pdfs\CRECIMIENTO ESPIRITUAL\loscuatroacuerdos.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+            
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro6.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Pensar rapido, pensar despacio</p>
+                    <div class="categories">Crecimiento mental</div>
+                    <a href="\pdfs\CRECIEMIENTO MENTAL\Daniel.-Pensar-Rápido-Pensar-Despacio.-LIBRO.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro7.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El juego interior del tenis</p>
+                    <div class="categories">Crecimiento mental</div>
+                    <a href="\pdfs\CRECIEMIENTO MENTAL\El Juego Interior del Tenis - Timothy Gallwey_text.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro8.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">La inteligencia emocional</p>
+                    <div class="categories">Crecimiento mental</div>
+                    <a href="\pdfs\CRECIEMIENTO MENTAL\inteligencia-emocional-pdf_compress.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro9.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El poder de la mente subconciente</p>
+                    <div class="categories">Crecimiento mental</div>
+                    <a href="\pdfs\CRECIEMIENTO MENTAL\el-poder-de-tu-mente-subconsciente-ed-por-j-m-343-pdf_compress.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro10.jpg">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Las sombras de la mente</p>
+                    <div class="categories">Crecimiento mental</div>
+                    <a href="/pdfs/CRECIEMIENTO MENTAL/las-sombras-de-la-mente-pdf_compress.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 11.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Habitos atomicos</p>
+                    <div class="categories">Crecimiento personal</div>
+                    <a href="/pdfs/CRECIMIENTO PERSONAL/habitos-atomicos.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 12.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Los 7 habitos de la gente altamente efectiva</p>
+                    <div class="categories">Crecimiento personal</div>
+                    <a href="/pdfs/CRECIMIENTO PERSONAL/Los 7 hábitos de la gente altamente efectiva. Stephen R. Covey.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 13.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Piense y hagase rico</p>
+                    <div class="categories">Crecimiento personal</div>
+                    <a href="pdfs/CRECIMIENTO PERSONAL/Piense_y_hagase_rico_Napoleon_Hill.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 14.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">El monje que vendio su ferrari</p>
+                    <div class="categories">Crecimiento personal</div>
+                    <a href="pdfs/CRECIMIENTO PERSONAL/Robin Sharma - El Monje que Vendió su Ferrari.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            <div class="featured_book_card">
+
+                <div class="featurde_book_img">
+                    <img src="images/libro 15.png">
+                </div>
+
+                <div class="featurde_book_tag">
+                    <h2>Para descargar</h2>
+                    <p class="writer">Despierta tu heroe interior</p>
+                    <div class="categories">Crecimiento personal</div>
+                    <a href="pdfs/CRECIMIENTO PERSONAL/Victor-Hugo-Manzanilla-Despierta-tu-heroe-interior.pdf" class="f_btn">Descargar</a>
+                </div>               
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                 <div class=" col-md-3 col-sm-6">
+                    <h3>Para que impulses</h3>
+                    <p class="variat pad_roght2">
+                       tu crecimiento personal,
+                       espiritual y mental,
+                       nunca dudes en EQUILIBRIUM LIFE.
+                    </p>
+                 </div>
+                 <div class=" col-md-3 col-sm-6">
+                    <h3>¿Como podemos ayudarte?</h3>
+                    <p  class="variat pad_roght2">Comunicate con nosotros por 
+                       numero telefonico al +57 312 6058545 o al correo equilibriumlifeparati@gmail.com
+                    </p>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                    <h3>INFORMACION</h3>
+                    <ul class="link_menu">
+                       <li><a href="index.html">INICIO</a></li>
+                       <li><a href="about.html"> ACERCA DE</a></li>
+                       <li><a href="service.html">SERVICIOS</a></li>
+                       <li><a href="gallery.html">GALERIA</a></li>
+                       <li><a href="testimonial.html">MULTIMEDIA</a></li>
+                       <li><a href="template/contact.html">CONTACTANOS</a></li>
+                    </ul>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                    
+                    <p  class="variat"> EQUILIBRIUM LIFE 2024.</p>
+                 </div>
+              </div>
+           </div>
+           <div class="copyright">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                       <p>© 2024 Todos los derechos reservados.</a></p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+  
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script>
+        function showContent(section) {
+           document.querySelectorAll('.content-section').forEach(function(content) {
+              content.style.display = 'none';
+           });
+           document.getElementById(section).style.display = 'block';
+        }
+     </script>
+</body>
+</html>
