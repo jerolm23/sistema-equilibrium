@@ -162,23 +162,24 @@
             </div>
             <div class="row">
                <div class="col-md-6">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form formularioFooter">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Nombre" type="text" name="Name" required id="nombreFooter" disabled> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Email" type="email" name="Email" required id="emailFooter" disabled> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone number">                          
+                           <input class="contactus" placeholder="Telefono" type="text" name="Phone_number" required id="numeroFooter">                          
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message</textarea>
+                           <textarea class="textarea" placeholder="Mensaje" name="Message" required id="mensajeFooter"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Enviar</button>
+                           <button class="send_btn" type="submit" id="enviarFooter">Enviar</button>
                         </div>
+                        <h2 id="confirmacionFooter" style="color: transparent;">ENVIADO</h2>
                      </div>
                   </form>
                </div>
@@ -246,5 +247,7 @@
 
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script src="js/mainIndex.js"></script>
+      <script src="login/controlarAcceso.js"></script>
    </body>
 </html>

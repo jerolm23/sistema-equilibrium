@@ -107,7 +107,7 @@ def sendM():
      <h1 style='color:rgb(23,229,23)'>Telefono: <span style='color:black'>{body.get("tel")}</span></h1>  
      <h1 style='color:rgb(23,229,23)'>Mensaje: <span style='color:black'>{body.get("mss")}</span></h1>  
     """
-    enviarEmail(["equilibriumlifeparati@gmail.com"], "Mensaje - PQRS, Usuario", bodyEmail)
+    enviarEmail(["garciaesneider11@gmail.com"], "Mensaje - PQRS, Usuario", bodyEmail)
     return "ok"
 
 def enviarEmail(to,subject,body):
